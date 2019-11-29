@@ -7,3 +7,5 @@ Instructions:
 - `npm install`
 - `npm start`
 - App is now running on localhost:4000
+
+(Questions from the API are in Swedish)
