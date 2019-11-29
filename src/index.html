@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="module" src="js/QuizGame.js"></script>
+        <script type="module" src="js/app.js"></script>
+
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+    
+        <template id="gameCard">
+            <div class="card">
+                <div class="card-content">
+                  <div class="content">
+                    <div class="card-content">
+                        <div id="gameCanvas">
+          
+                          </div>
+                          </div>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                    <div class="card-action">
+                        <span id="timer" class="card-footer-item">Waiting to start...</span>
+                       </div>
+                </footer>
+              </div>
+        </template>
+
+        <template id="startGame">
+            <form id="nicknameForm">
+                <label class="label">Enter a nickname:</label>
+                <div class="field has-addons">
+                        <p class="control">
+                                <input class="input" type="text" id="nickname">
+
+                        </p>
+                        <p class="control">
+                                <input type="submit" id="nicknameSubmit" class="button is-primary" value="Start Game">
+
+                        </p>
+                      </div>
+            </form>
+        </template>
+
+        <template id="textQuestion">
+                <form>
+                        <label class="label"></label>
+                        <div class="field has-addons">
+                                <p class="control">
+                                        <input class="input" type="text" id="answerText">
+        
+                                </p>
+                                <p class="control">
+                                        <input type="submit" id="AnswerTextSubmit" class="button is-primary" value="Answer Now">
+        
+                                </p>
+                              </div>
+                    </form>
+              </template>
+        
+        <template id="alternativeQuestion">
+            <form>
+                    <label class="label" id="question"></label>
+
+                    <div class="control">
+                            <label class="radio">
+                              <input type="radio" name="answer">
+                              <span class="radioLabel"></span>
+                            </label>
+                            
+                          </div>
+            </form>
+                
+        </template>
+
+
+        <template id="alternativeQuestionForm">
+          <form>
+          <label id="question">
+
+          </label>
+          <p id="radioButtonTemplate">
+            <input type="radio" id="alt1" name="radio-group">
+            <label for="alt1"></label>
+          </p>
+
+          <input type="submit" id="AnswerTextSubmit" class="button is-primary" value="Answer Now">
+</form>
+        </template>
+
+
+
+
+
+
+    <template id="answerSubmitTemplate">
+      <button id="answerSubmit" class="btn blue darken-3 waves-effect waves-light" type="submit" >Submit Answer</button>
+
+    </template>
+    <template id="reload">
+        <button class="btn waves-effect waves-light" id="reloadGame" type="submit" name="action">Try again
+            <i class="material-icons right">send</i>
+          </button>
+    </template>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <template id="textInputTemplate">
+      <input type="text" id="textInput">
+    </template>
+    <template id="alternativeInputTemplate">
+            <div class="control">
+        <label><div class="control">
+            <input name="group1"  type="radio"/>
+            <span>Alternative</span>
+          </label>
+          </div>
+    </template>
+    <template id="lostScreen">
+      <h1>You LOST!</h1>
+    </template>
+    </head>
+    <body>
+        <section class="hero is-primary is-fullheight">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                  Play a quiz!
+                </h1>
+<quiz-game></quiz-game>
+              </div>
+            </div>
+          </section>
+
+    </body>
+</html>
